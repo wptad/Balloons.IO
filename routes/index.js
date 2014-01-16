@@ -39,6 +39,18 @@ function Routes (app) {
     }
   });
 
+	/*
+	 * Local Login routes
+	 */
+	app.get('/login', function(req, res){
+		res.render('login', { user: req.user});
+	});
+	app.post('/login',
+		passport.authenticate('local', { failureRedirect: '/login' }),
+		function(req, res) {
+			res.redirect('/rooms');
+		});
+
   /*
    * Authentication routes
    */
