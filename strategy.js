@@ -7,7 +7,7 @@ var passport = require('passport')
   , TwitterStrategy = require('passport-twitter').Strategy
   , FacebookStrategy = require('passport-facebook').Strategy
   , LocalStrategy = require('passport-local').Strategy
-  , config = require('./config.json');
+  , config = require('./config/config.json');
 
 
 /*
